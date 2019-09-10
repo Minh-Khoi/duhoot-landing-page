@@ -198,7 +198,8 @@ $(window).on("resize load", function(e) {
 });
 
 //toggle color of start in .content-wrapper
-$('.noidung .content-wrapper ')
+$('.noidung .content-wrapper, .noidung .content-wrapper-2,'  
+       + '.noidung .title-row , .noidung .title-row-2')
                     .each(function (index, element) {
     // element == this
     // console.log(typeof element);
