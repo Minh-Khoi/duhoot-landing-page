@@ -1,45 +1,93 @@
 /* menu */
     /* Collapse Navbar breakpoint changing from 768px to 865px */
     @media (max-width: 865px) {
-        .navbar-header {
+        .menu .navbar-header {
             float: none;
         }
-        .navbar-left,.navbar-right {
+        .menu .navbar-left,.navbar-right {
             float: none !important;
         }
-        .navbar-toggle {
+        .menu .navbar-toggle {
             display: block;
         }
-        .navbar-collapse {
+        .menu .navbar-collapse {
             border-top: 1px solid transparent;
             box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
         }
-        .navbar-fixed-top {
+        .menu .navbar-fixed-top {
             top: 0;
             border-width: 0 0 1px;
         }
-        .navbar-collapse.collapse {
+        .menu .navbar-collapse.collapse {
             display: none!important;
         }
-        .navbar-nav {
+        .menu .navbar-nav {
             float: none!important;
             margin-top: 7.5px;
         }
-        .navbar-nav>li {
+        .menu .navbar-nav>li {
             float: none;
         }
-        .navbar-nav>li>a {
+        .menu .navbar-nav>li>a {
             padding-top: 10px;
             padding-bottom: 10px;
         }
-        .collapse.in{
+        .menu .collapse.in{
             display:block !important;
         }
-        .navbar-fixed-top .navbar-collapse {
+        .menu .navbar-fixed-top .navbar-collapse {
             max-height: fit-content;
             max-width: 100%;
             overflow: hidden;
         }
     }
-
     
+/* FILTER */
+    /* Reponsive displaying for filter bar */
+    @media only screen and (max-width: 1113px){
+        .filter nav form{
+            float: none!important;
+        }
+        .filter .navbar ul.navbar-right{
+            float:none!important;
+            margin-left: 35%;
+        }
+        .filter ul.nav:first-of-type{
+            margin-left: 20% ;
+            margin-right: 21px;
+        }
+    }
+    @media only screen and (max-width: 960px){
+        .filter .navbar ul.navbar-right{
+            margin-left: 30%;
+        }
+        .filter ul.nav:first-of-type{
+            margin-left: 15% ;
+        }
+    }
+    @media only screen and (max-width: 767px){
+        .filter nav form{
+            float: left!important;
+            margin-top: -1px;
+        }
+        .filter ul.nav:first-of-type{
+            float: left;
+            margin-left: 5%;
+        }
+        .filter .navbar ul.navbar-right{
+            margin-left: 25%;
+        }
+    }
+    @media only screen and (max-width: 685px){
+        .filter nav {
+            text-align: center;
+        }
+        .filter nav form, 
+        .filter ul.nav:first-of-type,
+        .filter .navbar ul.navbar-right{
+            float:none!important;
+        }
+        .filter .navbar ul.navbar-right{
+            margin-left: 10%;
+        }
+    }

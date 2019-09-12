@@ -203,7 +203,7 @@ hr{
         width: 95%;/*474px*/
         height: 54px;
         border-radius: 27px;
-        margin: 22px 0 28px 0;
+        margin: 15px 0 22px 0;
         text-indent: 13px;
         font-size: 18px;
         font-family: "Gotham Book";
@@ -226,7 +226,7 @@ hr{
     }
 @media only screen and (min-width: 768px){
     .banner{
-        height: 450px;
+        height: 430px;
     }
     .banner input[type="text"] {
         width: 474px;
@@ -549,6 +549,8 @@ hr{
         }
         .long .title-row ul li img, .long .title-row-2 ul li img{
             vertical-align: text-bottom;
+            width: 1.25em;
+            height: 1.1em;
         }
         .noidung .long  i:not(.fa-star)::after{ 
             background-repeat: no-repeat;
@@ -572,7 +574,7 @@ hr{
             margin-left: 3.55%;
         }
         .noidung .long .content-row .left .vertical-line{
-            display: none;
+            display: block;
             position: absolute;
             margin-top: -12.75px;
             margin-left: 6%;
@@ -613,9 +615,9 @@ hr{
         width: 70%;
     }
 }
-@media (max-width: 640px){
+@media only screen and (max-width: 640px){
     .noidung .long .content-row .left .vertical-line{
-        display: block;
+        display: none;
     }
 }
 @media only screen and (min-width: 620px){
