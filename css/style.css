@@ -98,6 +98,7 @@ hr{
     }
     .menu ul.navbar-right li a:hover{
         background: rgb(233, 78, 56);
+        color: #fff;
     }
     .menu ul.navbar-right li a img{
         margin-right: 15px;
@@ -187,6 +188,7 @@ hr{
         background-color: rgba(255, 255, 255, 0.102);
         font-family: "Gotham Book";
         font-size: 18px;
+        padding-left: 15px;
     }
     .banner select option{
         background-color: rgb(63, 61, 61);
@@ -196,6 +198,7 @@ hr{
     } */
     /* TEXT FIELD */
     .banner input[type="text"] {
+        padding-left: 15px;
         border-style: solid;
         border-width: 1px;
         border-color: rgba(255,255,255,0.2);
@@ -245,6 +248,7 @@ hr{
     background-color: rgb(255, 255, 255);
     line-height: inherit;
     border-bottom: 1.15px solid #e2dee0;
+    min-height: 60px;
 }
     /* Filter list options */
     .filter ul li{
@@ -256,17 +260,20 @@ hr{
     .filter ul:first-of-type{
         margin-left: 0vw;
         margin-right: 0;
+        margin-top: 5px;
     }
     .filter ul:first-of-type li:hover a{
         color: rgb(233, 78, 56);
     }
     /* Select */
-    .filter form{
+    .filter form.navbar-form {
         margin-left:  0;
         margin-right:0;
         padding-left: 5vw;
+        margin-top: 10.8px;
+        border-color: transparent;
     }
-    .filter select{
+    .filter select, .filter button{
         border-style: solid;
         border-width: 1px;
         border-color: rgb(150, 166, 167);
@@ -285,7 +292,15 @@ hr{
         font-family: "Gotham Medium";
         color:#96a6a7;
     }
-    .filter select:hover{
+    .filter button{
+        background: url(../imgs/filter/map.png) no-repeat;
+        background-position: 100px center;
+        text-indent: -11px;
+    }
+    .filter select:focus, .filter button:focus{
+        outline: none;
+    }
+    .filter select:hover, .filter button:hover{
         color:#e94e38;
     }
     .filter select:last-child{
@@ -299,6 +314,7 @@ hr{
         margin-right: 10vw;
         float:left;
         margin-left: 10px;
+        margin-top: 5px;
     }
     .filter .navbar ul.navbar-right li{
         width: 38px;
@@ -338,11 +354,7 @@ hr{
         margin-left: 0;
     }
 }
-@media only screen and (min-width: 1300px){
-    .filter form{
-        margin-left: 11vw;
-    }
-}
+
 /* NOI DUng */
 .noidung .row{
     height: fit-content;
@@ -387,6 +399,7 @@ hr{
             right: 32px;
             visibility: visible;
             background-color: rgb(27, 175, 93);
+            font-weight: 400;
         }
         .noidung .content-wrapper .show-more{
             border-style: solid;
@@ -417,6 +430,9 @@ hr{
             width: 15px;
             height: auto;
             vertical-align: baseline;
+        }
+        .noidung ul li:not(:first-of-type) img{
+            margin-left: -4px;
         }
         .noidung .content-wrapper > img{
             position: absolute;
@@ -462,8 +478,10 @@ hr{
         display: inline-block;
         text-align: center
     }
-    .noidung i.icon1::after{
+    .noidung .content-wrapper-2 i.icon1::after, 
+    .noidung .long > div > i.icon1::after{
         background-image: url(../imgs/filter/icon1.png);
+        background-size: 1.2em 0.93em;
     }
     .noidung i.icon2::after {
         background-image: url(../imgs/filter/icon4.png);
@@ -592,7 +610,7 @@ hr{
         .noidung .long .content-row .right p{
             color:#667181;
             font-family: "Gotham Book";
-            height: 5.35em;
+            height: 5.65em;
             margin-bottom:1em;
         }
         .noidung .long .content-row .right b{
@@ -709,6 +727,7 @@ hr{
     }
     .offer i.icon1::after{
         background-image: url(../imgs/offer/icon1.png);
+        background-size: 2.4em 1.8em;
     }
     .offer i.icon1:hover::after{
         background-image: url(../imgs/offer/icon1-hover.png);
@@ -797,11 +816,12 @@ hr{
         font-size: 24px;
     }
     .footer .footer-up form img {
-        margin-right: -3.5%;
+        margin-right: -5.5%;
+        margin-top: -4px;
         display: none;
     }
     .footer .footer-up input[type="text"]{
-        width: 40vw;
+        width: 55vw;
         height: 60px;
         border-radius: 30px;
         border: 1px solid #6d6968;
@@ -809,7 +829,7 @@ hr{
         color: #f6f6f6;
         font-size: 18px;
         font-family: "Gotham Book";
-        padding-left: 4%;
+        padding-left:6%;
         margin-bottom: 65px;
     }
     .footer .footer-up input[type="text"]:focus{
@@ -826,6 +846,9 @@ hr{
         box-shadow: 1px 2px #ee5f4cb4;
         top: -2px;
         color:white;
+    }
+    .footer .footer-up input[type="submit"]:focus{
+        outline: none;
     }
     /* FOOTER DOWN */
     .footer .footer-down{
@@ -863,7 +886,8 @@ hr{
         .footer .footer-up form input[type="submit"]{
             /* margin-left: -10vw; */
             left: -111%;
-            width: 10vw;
+            /* width: 10vw; */
+            padding: 0 20px;
         }
     }
     @media only screen and (min-width: 992px){

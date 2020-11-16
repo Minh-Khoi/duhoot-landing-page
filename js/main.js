@@ -197,8 +197,8 @@ $(window).on("resize load", function(e) {
     // });
 });
 
-//toggle color of start in .content-wrapper
-$('.noidung .content-wrapper, .noidung .content-wrapper-2,'  
+//toggle color of start in .content-wrapper-2, title-row, .title-row-2
+$(' .noidung .content-wrapper-2,'  
        + '.noidung .title-row , .noidung .title-row-2')
                     .each(function (index, element) {
     // element == this
@@ -209,13 +209,13 @@ $('.noidung .content-wrapper, .noidung .content-wrapper-2,'
                 // console.log($(this).parentsUntil(".content-wrapper").eq(1)
                 //                             .find('li img[alt=""]'));
                 for(let i=0;i<=index2;i++){
-                    $(this).parentsUntil(".content-wrapper, .content-wrapper-2").eq(1)
+                    $(this).parentsUntil().eq(1)
                         .find('li img[alt=""]').eq(i)
                         .attr("src", "./imgs/noidung/start-icon.png");
                 }
             }, function () {
                 for(let i=0;i<=index2;i++){
-                    $(this).parentsUntil(".content-wrapper, .content-wrapper-2").eq(1)
+                    $(this).parentsUntil().eq(1)
                         .find('li img[alt=""]').eq(i)
                         .attr("src", "./imgs/noidung/star-icon2.png");
                 }
@@ -223,6 +223,33 @@ $('.noidung .content-wrapper, .noidung .content-wrapper-2,'
         );
     })
 });
+
+//toggle color of start in .content-wrapper
+$('.noidung .content-wrapper')
+                    .each(function (index, element) {
+    // element == this
+    // console.log(typeof element);
+    $(this).find(' ul li img[alt=""]').each(function(index2,el){
+        $(this).hover(function () {
+                // over
+                // console.log($(this).parentsUntil(".content-wrapper").eq(1)
+                //                             .find('li img[alt=""]'));
+                for(let i=0;i<=index2;i++){
+                    $(this).parentsUntil().eq(1)
+                        .find('li img[alt=""]').eq(i)
+                        .attr("src", "./imgs/noidung/start-icon1.png");
+                }
+            }, function () {
+                for(let i=0;i<=index2;i++){
+                    $(this).parentsUntil().eq(1)
+                        .find('li img[alt=""]').eq(i)
+                        .attr("src", "./imgs/noidung/star-icon3.png");
+                }
+            }
+        );
+    })
+});
+
 // $(".noidung .content-wrapper-2").each(function(i,e){
 //     $(this).find("ul li i.fa-star").each(function(i2,e2){
 //         console.log(i2);
@@ -230,28 +257,28 @@ $('.noidung .content-wrapper, .noidung .content-wrapper-2,'
 // });      
 
 //toggle color of stars in .content-wrapper-2
-$(".noidung .content-wrapper-2 ")
-                    .each(function (index, element) {
-    // element == this
-    $(this).find("ul li i.fa-star").each(function(index2, el){
-        $(this).hover(function (e) {
-                // over
-                //console.log($(this).parentsUntil(".content-wrapper-2").eq(1).find('i.fa-star').eq(0));
-                for(let i=0;i<=(index2);i++){
-                    $(this).parentsUntil(".content-wrapper-2")
-                                .eq(1).find('i.fa-star')
-                                .eq(i).css("color", "rgb(241, 158, 31)");
-                }
-            }, function () {
-                for(let i=0;i<=(index2);i++){
-                    $(this).parentsUntil(".content-wrapper-2")
-                                .eq(1).find('i.fa-star')
-                                .eq(i).css("color", "");
-                }
-            }
-        );
-    });
-});
+// $(".noidung .content-wrapper-2 ")
+//                     .each(function (index, element) {
+//     // element == this
+//     $(this).find("ul li i.fa-star").each(function(index2, el){
+//         $(this).hover(function (e) {
+//                 // over
+//                 //console.log($(this).parentsUntil(".content-wrapper-2").eq(1).find('i.fa-star').eq(0));
+//                 for(let i=0;i<=(index2);i++){
+//                     $(this).parentsUntil(".content-wrapper-2")
+//                                 .eq(1).find('i.fa-star')
+//                                 .eq(i).css("color", "rgb(241, 158, 31)");
+//                 }
+//             }, function () {
+//                 for(let i=0;i<=(index2);i++){
+//                     $(this).parentsUntil(".content-wrapper-2")
+//                                 .eq(1).find('i.fa-star')
+//                                 .eq(i).css("color", "");
+//                 }
+//             }
+//         );
+//     });
+// });
 
 // Set hover for content-wraper
 $(".noidung .img-wrapper, .noidung .content-wrapper ").hover(function (e) {
@@ -266,27 +293,27 @@ $(".noidung .img-wrapper, .noidung .content-wrapper ").hover(function (e) {
 );
 
 // In .long , toggle color of stars in .title-row and title-row-2
-$(".noidung .long .title-row, .noidung .long .title-row-2 ")
-                    .each(function (index, element) {
-    // element == this
-    $(this).find("ul li i.fa-star").each(function(index2, el){
-        $(this).hover(function (e) {
-                // over
-                //console.log($(this).parentsUntil(".content-wrapper-2").eq(1).find('i.fa-star').eq(0));
-                for(let i=0;i<=(index2);i++){
-                    $(this).parentsUntil(".title-row, .title-row-2")
-                                .eq(1).find('i.fa-star')
-                                .eq(i).css("color", "rgb(241, 158, 31)");
-                }
-            }, function () {
-                for(let i=0;i<=(index2);i++){
-                    $(this).parentsUntil(".title-row, .title-row-2")
-                                .eq(1).find('i.fa-star')
-                                .eq(i).css("color", "");
-                }
-            }
-        );
-    });
-});
+// $(".noidung .long .title-row, .noidung .long .title-row-2 ")
+//                     .each(function (index, element) {
+//     // element == this
+//     $(this).find("ul li i.fa-star").each(function(index2, el){
+//         $(this).hover(function (e) {
+//                 // over
+//                 //console.log($(this).parentsUntil(".content-wrapper-2").eq(1).find('i.fa-star').eq(0));
+//                 for(let i=0;i<=(index2);i++){
+//                     $(this).parentsUntil(".title-row, .title-row-2")
+//                                 .eq(1).find('i.fa-star')
+//                                 .eq(i).css("color", "rgb(241, 158, 31)");
+//                 }
+//             }, function () {
+//                 for(let i=0;i<=(index2);i++){
+//                     $(this).parentsUntil(".title-row, .title-row-2")
+//                                 .eq(1).find('i.fa-star')
+//                                 .eq(i).css("color", "");
+//                 }
+//             }
+//         );
+//     });
+// });
 
 

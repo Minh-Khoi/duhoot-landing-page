@@ -51,6 +51,7 @@
         .filter .navbar ul.navbar-right{
             float:none!important;
             margin-left: 35%;
+            margin-bottom: 5px;
         }
         .filter ul.nav:first-of-type{
             margin-left: 20% ;
@@ -66,8 +67,8 @@
         }
     }
     @media only screen and (max-width: 767px){
-        .filter nav form{
-            float: left!important;
+        .filter nav form.navbar-form {
+            float:none!important;
             margin-top: -1px;
         }
         .filter ul.nav:first-of-type{
